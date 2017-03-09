@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="google-signin-client_id" content="840071569798-etj94bjoia6pkbo5a1lfnat24c5n6jn9.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+</head>
+<body>
+<div class="g-signin2" data-onsuccess="onSignIn"></div>
+</body>
+<script>
+    function onSignIn(googleUser) {
+        console.log(googleUser.getAuthResponse().id_token);
+        var profile = googleUser.getBasicProfile();
+        console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+        console.log('Name: ' + profile.getName());
+        console.log('Image URL: ' + profile.getImageUrl());
+        console.log('Email: ' + profile.getEmail());
+    }
+</script>
+</html>
+eyJhbGciOiJSUzI1NiIsImtpZCI6IjdkZTI3OTIyZDQ3ODg3MjJiMzk2M2NlMzFjOTExNzc3YzQ0MmIwNWIifQ.eyJpc3MiOiJhY2NvdW50cy5nb29nbGUuY29tIiwiYXRfaGFzaCI6InVESFBsT2g2VHFob3NDa0pDY2xfZlEiLCJhdWQiOiI4NDAwNzE1Njk3OTgtZXRqOTRiam9pYTZwa2JvNWExbGZuYXQyNGM1bjZqbjkuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTgxODY5MDk0OTk1MTg2ODM5ODkiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXpwIjoiODQwMDcxNTY5Nzk4LWV0ajk0YmpvaWE2cGtibzVhMWxmbmF0MjRjNW42am45LmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwiZW1haWwiOiJwZHV0dDExMUBnbWFpbC5jb20iLCJpYXQiOjE0NzM3NTc3MjQsImV4cCI6MTQ3Mzc2MTMyNCwibmFtZSI6InBhcmlza3NoaXQgZHV0dCIsInBpY3R1cmUiOiJodHRwczovL2xoNS5nb29nbGV1c2VyY29udGVudC5jb20vLWdMbzQzZ3lESGRFL0FBQUFBQUFBQUFJL0FBQUFBQUFBRV9vL3RibWZBOVNjWXFRL3M5Ni1jL3Bob3RvLmpwZyIsImdpdmVuX25hbWUiOiJwYXJpc2tzaGl0IiwiZmFtaWx5X25hbWUiOiJkdXR0IiwibG9jYWxlIjoiZW4ifQ.sqUPMefpjZrwdQxzY3dW4lb3-dyaJ87m303VMQFV46tT8amFGJsEt9n4rlwWtsDzxrFHT_68NbPH_JIZ3lS_lH5gimgtmTRbsIE3OuefOA2C6v5XC2rzMmp6MXK6jMiwUY4w5yVJoihooRdvAQz-ScecltEjUUqDS62PVBU9k33K3ZjFE6rEDHP0t8llNGo6BRW0WbPETzHSRoK3poAqSDUwv6P30TO6xjMW8VyAMUEFqOXIK4jKWGLN1cEW7iFK_GDZ3UapfvZoxhmW3NHvzXt7kKLj_7Qk8KX8XxZmrPXKEQng-yRBFlCbwEW0nMufRYn3VbIdZhi3n8GnTwbtIQ
